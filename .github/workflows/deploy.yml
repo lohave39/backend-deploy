@@ -41,6 +41,8 @@ jobs:
             # Create .env file
             cat > .env << EOF
             PORT=5000
+            MONGO_URI=${{secrets.MONGO_URI}}
+            JWT_SECRET=${{secrets.JWT_SECRET}}
             # add other ENV vars here
             EOF
 
